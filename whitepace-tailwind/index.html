@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./assets/css/master.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'inter': ['Inter'],
+          }
+        }
+      }
+    }
+  </script>
+  <title>whitepace</title>
+</head>
+
+<body class="overflow-x-hidden w-full">
+  <header class="px-[5%] flex justify-between items-center h-20">
+    <h1 class="text-blue-400 font-bold flex justify-center items-center gap-2 text-lg font-inter">
+      <svg width="25" height="25" viewBox="0 0 38 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_5_34636)">
+          <path
+            d="M0.75 2.86525V9.6182C0.75 11.6749 3.25611 12.7719 4.78763 11.3322L12.0971 4.5792C13.6983 3.1052 12.654 0.5 10.4612 0.5H3.15169C1.82902 0.5 0.75 1.56265 0.75 2.86525Z"
+            fill="#4F9CF9" />
+          <path
+            d="M35.3482 0.5H28.0387C25.8807 0.5 24.8017 3.1052 26.4028 4.5792L33.7123 11.3322C35.2438 12.7376 37.7499 11.6749 37.7499 9.6182V2.86525C37.7499 1.56265 36.6709 0.5 35.3482 0.5Z"
+            fill="#4F9CF9" />
+          <path
+            d="M20.9033 16.9884L33.7124 28.8489C35.2439 30.2543 37.75 29.1917 37.75 27.1349V20.3134C37.75 19.6621 37.4715 19.0451 36.9842 18.5995L20.9033 3.68814C19.9635 2.83117 18.5365 2.83117 17.5967 3.68814L1.51576 18.5995C1.02846 19.0451 0.75 19.6621 0.75 20.3134V27.1349C0.75 29.1917 3.25611 30.2886 4.78763 28.8489L17.5967 16.9884C18.5365 16.1314 19.9635 16.1314 20.9033 16.9884Z"
+            fill="#4F9CF9" />
+        </g>
+        <defs>
+          <clipPath id="clip0_5_34636">
+            <rect width="37" height="29" fill="white" transform="translate(0.75 0.5)" />
+          </clipPath>
+        </defs>
+      </svg>
+      whitepace
+    </h1>
+    <nav class="h-full w-[70%] flex justify-center items-center">
+      <button class="md:hidden block ml-auto mx-2 absolute top-4 right-4" onclick="openMenu()">
+        <svg width="42" height="26" viewBox="0 0 42 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line y1="1" x2="42" y2="1" stroke="#4F9CF9" stroke-width="2" />
+          <line y1="13" x2="42" y2="13" stroke="#4F9CF9" stroke-width="2" />
+          <line y1="25" x2="42" y2="25" stroke="#4F9CF9" stroke-width="2" />
+        </svg>
+
+      </button>
+      <ul
+        class="md:h-full h-auto hidden md:flex flex-col md:flex-row items-center justify-end gap-4 text-blue-400 w-full absolute md:static top-16 left-0 md:mt-0 bg-white  z-50 md:bg-transparent shadow-md md:shadow-none">
+        <li class="flex gap-1 md:h-full h-14  items-center cursor-pointer hover:text-blue-800 group px-2">Products
+          <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.75 1L5.25 5L9.75 1" class="stroke-blue-400 group-hover:stroke-blue-800" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+
+        </li>
+        <li class="flex gap-1 md:h-full h-14 items-center cursor-pointer hover:text-blue-800 px-2 group">Solutions
+          <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.75 1L5.25 5L9.75 1" class="stroke-blue-400 group-hover:stroke-blue-800" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+
+        </li>
+        <li class="flex gap-1 md:h-full h-14 items-center cursor-pointer hover:text-blue-800 px-2 group">Resources
+          <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.75 1L5.25 5L9.75 1" class="stroke-blue-400 group-hover:stroke-blue-800" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+
+        </li>
+        <li class="flex gap-1 md:h-full h-14 items-center cursor-pointer hover:text-blue-800 px-2 group">Pricing
+          <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.75 1L5.25 5L9.75 1" class="stroke-blue-400 group-hover:stroke-blue-800" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+
+        </li>
+        <button
+          class="bg-yellow-400 px-4 py-2 rounded-md text-blue-600 font-semibold cursor-pointer hover:scale-110 ease-in-out delay-150 focus:outline-blue-400 focus:outline-2 focus:outline md:my-0 my-4 w-auto">Login</button>
+        <button
+          class="bg-blue-400 px-4 py-2 rounded-md text-white font-semibold flex gap-1 items-center hover:scale-110 ease-in-out delay-150 focus:outline-yellow-600 focus:outline-2 focus:outline md:my-0 my-4">Try
+          whitepace free
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.25 6H11.25" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M6.25 1L11.25 6L6.25 11" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+
+        </button>
+      </ul>
+      <script>
+        function openMenu(){
+          const styles = document.querySelector('ul').classList;
+          if(styles.contains('hidden')){
+            document.querySelector('ul').classList.add('flex');
+            document.querySelector('ul').classList.remove('hidden');
+          }else {
+            document.querySelector('ul').classList.add('hidden');
+            document.querySelector('ul').classList.remove('flex');
+          }
+        }
+      </script>
+    </nav>
+  </header>
+  <main class="px-[5%]">
+    <section class="w-full md:flex-row flex-col flex justify-center items-center gap-2 md:py-24 py-8">
+      <header class="md:w-[40%] md:text-left text-center ">
+        <h1 class="text-6xl font-bold text-blue-400">
+          Get More Done with whitepace
+        </h1>
+        <p class="py-4 text-blue-400">Project management software that enables your teams to collaborate, plan, analyze
+          and manage everyday tasks
+        </p>
+        <button
+          class="bg-blue-400 px-4 py-2 rounded-md text-white font-semibold mx-auto  flex gap-1 items-center hover:scale-110 ease-in-out delay-150 focus:outline-yellow-600 focus:outline-2 focus:outline">Try
+          whitepace free
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.25 6H11.25" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M6.25 1L11.25 6L6.25 11" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+      </header>
+      <div class="h-[80%] px-8 py-8 md:w-2/4 w-full ">
+        <img
+          src="https://images.pexels.com/photos/5940841/pexels-photo-5940841.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="whitepace">
+      </div>
+    </section>
+    <section class="w-full py-24">
+      <article class=" md:flex-row flex-col justify-center items-center gap-2 flex">
+        <header class="md:w-[40%] w-full">
+          <h1 class="text-6xl font-bold text-black-400">
+            <span class="relative text-center md:text-left  block z-20">Project Management</span>
+            <img class="relative z-10 -md:mt-8 -mt-4 w-full " src="https://ik.imagekit.io/5vxqfrr3p/Element-mobile.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672752427440" alt="element">
+          </h1>
+          <p class="py-4 text-black-400 md:text-left text-center">Images, videos, PDFs and audio files are supported.
+            Create math expressions and diagrams directly from the app. Take photos with the mobile app and save them to
+            a note.
+          </p>
+          <button
+            class="md:mx-0 my-4 mx-auto bg-blue-400 px-4 py-2 rounded-md text-white font-semibold flex gap-1 items-center hover:scale-110 ease-in-out delay-150 focus:outline-yellow-600 focus:outline-2 focus:outline">Get
+            Started
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.25 6H11.25" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M6.25 1L11.25 6L6.25 11" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+        </header>
+        <div class="h-[80%] px-8 py-8 md:w-2/4 w-full ">
+          <img
+            src="https://images.pexels.com/photos/590037/pexels-photo-590037.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="whitepace">
+        </div>
+      </article>
+      <article class=" md:flex-row flex-col justify-center items-center gap-2 flex">
+
+        <div class="h-[80%] md:pr-36 py-8 md:w-2/4 w-full mx-auto">
+          <img
+            src="https://ik.imagekit.io/templatesfree/Work_Together_Image.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672321888505"
+            alt="whitepace">
+        </div>
+        <header class="md:w-[40%] w-full">
+          <h1 class="text-6xl font-bold text-black-400">
+            <span class="relative text-center md:text-left  block z-20">Work together</span>
+            <img class="relative z-10 -md:mt-8 -mt-4 w-full " src="https://ik.imagekit.io/5vxqfrr3p/Element-mobile.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672752427440" alt="element">
+          </h1>
+          <p class="py-4 text-black-400 md:text-left text-center">With whitepace, share your notes with your colleagues
+            and collaborate on them.
+            You can also publish a note to the internet and share the URL with others.
+          </p>
+          <button
+            class="md:mx-0 my-4 mx-auto bg-blue-400 px-4 py-2 rounded-md text-white font-semibold flex gap-1 items-center hover:scale-110 ease-in-out delay-150 focus:outline-yellow-600 focus:outline-2 focus:outline">Try
+            it now
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.25 6H11.25" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M6.25 1L11.25 6L6.25 11" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+        </header>
+      </article>
+    </section>
+    <section class="w-full flex-col justify-center items-center gap-2  py-8">
+      <header class="w-full text-center md:text-left flex flex-col items-center">
+        <h1 class="text-6xl font-bold text-black-400  text-center w-full ">
+          <span class="relative text-center  text-center  block z-20">Choose Your Plan</span>
+          <img class="relative z-10 -md:mt-8 -mt-4  w-2/4 mx-auto md:ml-[50%] md:mr-[50%]"
+            style="width: 300px !important; ;" src="https://ik.imagekit.io/5vxqfrr3p/Element-mobile.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672752427440" alt="element">
+        </h1>
+        <p class="py-4 text-black-400">Whether you want to get organized, keep your personal life on track, or boost
+          workplace productivity, Evernote has the right plan for you.
+        </p>
+      </header>
+      <div
+        class="slidePricing h-[80%] px-8 py-8  w-full flex justify-start overflow-x-scroll md:overflow-x-hidden items-center">
+        <!-- Item 1 -->
+        <div class="shadow-md rounded-md m-2 p-2 bg-white border-yellow-400 border" style="flex: 1 0 300px;">
+          <header>
+            <h1 class="text-black-800 font-semibold text-2xl my-2">Free</h1>
+          </header>
+          <h2 class="text-black-800 font-bold text-4xl my-2">$0</h2>
+          <p class="text-black my-4">Capture ideas and find them quickly</p>
+          <ul>
+            <li class="flex items-center w-full h-8 my-8 gap-4">
+              <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M19.5059 10.1769V11.0051C19.5047 12.9466 18.8761 14.8356 17.7137 16.3905C16.5512 17.9455 14.9173 19.083 13.0556 19.6335C11.1938 20.1839 9.20404 20.1178 7.38294 19.445C5.56183 18.7722 4.007 17.5288 2.95034 15.9001C1.89367 14.2714 1.39178 12.3448 1.51952 10.4076C1.64725 8.47043 2.39778 6.62642 3.65915 5.15061C4.92053 3.6748 6.62517 2.64628 8.51885 2.21843C10.4125 1.79057 12.3938 1.98632 14.1671 2.77648"
+                  stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M19.5058 3.80273L10.5029 12.8147L7.802 10.1138" stroke="#000000" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <span class="text-black-800 mb-1">Sync unlimited devices</span>
+            </li>
+            <li class="flex items-center w-full h-8 my-8 gap-4">
+              <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M19.5059 10.1769V11.0051C19.5047 12.9466 18.8761 14.8356 17.7137 16.3905C16.5512 17.9455 14.9173 19.083 13.0556 19.6335C11.1938 20.1839 9.20404 20.1178 7.38294 19.445C5.56183 18.7722 4.007 17.5288 2.95034 15.9001C1.89367 14.2714 1.39178 12.3448 1.51952 10.4076C1.64725 8.47043 2.39778 6.62642 3.65915 5.15061C4.92053 3.6748 6.62517 2.64628 8.51885 2.21843C10.4125 1.79057 12.3938 1.98632 14.1671 2.77648"
+                  stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M19.5058 3.80273L10.5029 12.8147L7.802 10.1138" stroke="#000000" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <span class="text-black-800 mb-1">10 GB monthly uploads
+              </span>
+            </li>
+            <li class="flex items-center w-full h-8 my-8 gap-4">
+              <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M19.5059 10.1769V11.0051C19.5047 12.9466 18.8761 14.8356 17.7137 16.3905C16.5512 17.9455 14.9173 19.083 13.0556 19.6335C11.1938 20.1839 9.20404 20.1178 7.38294 19.445C5.56183 18.7722 4.007 17.5288 2.95034 15.9001C1.89367 14.2714 1.39178 12.3448 1.51952 10.4076C1.64725 8.47043 2.39778 6.62642 3.65915 5.15061C4.92053 3.6748 6.62517 2.64628 8.51885 2.21843C10.4125 1.79057 12.3938 1.98632 14.1671 2.77648"
+                  stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M19.5058 3.80273L10.5029 12.8147L7.802 10.1138" stroke="#000000" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <span class="text-black-800 mb-1">200 MB max. note size
+              </span>
+            </li>
+            <li class="flex items-center w-full h-8 my-8 gap-4">
+              <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M19.5059 10.1769V11.0051C19.5047 12.9466 18.8761 14.8356 17.7137 16.3905C16.5512 17.9455 14.9173 19.083 13.0556 19.6335C11.1938 20.1839 9.20404 20.1178 7.38294 19.445C5.56183 18.7722 4.007 17.5288 2.95034 15.9001C1.89367 14.2714 1.39178 12.3448 1.51952 10.4076C1.64725 8.47043 2.39778 6.62642 3.65915 5.15061C4.92053 3.6748 6.62517 2.64628 8.51885 2.21843C10.4125 1.79057 12.3938 1.98632 14.1671 2.77648"
+                  stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M19.5058 3.80273L10.5029 12.8147L7.802 10.1138" stroke="#000000" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <span class="text-black-800 mb-1">Customize Home dashboard and access extra widgets
+              </span>
+            </li>
+            <li class="flex items-center w-full h-8 my-8 gap-4">
+              <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M19.5059 10.1769V11.0051C19.5047 12.9466 18.8761 14.8356 17.7137 16.3905C16.5512 17.9455 14.9173 19.083 13.0556 19.6335C11.1938 20.1839 9.20404 20.1178 7.38294 19.445C5.56183 18.7722 4.007 17.5288 2.95034 15.9001C1.89367 14.2714 1.39178 12.3448 1.51952 10.4076C1.64725 8.47043 2.39778 6.62642 3.65915 5.15061C4.92053 3.6748 6.62517 2.64628 8.51885 2.21843C10.4125 1.79057 12.3938 1.98632 14.1671 2.77648"
+                  stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M19.5058 3.80273L10.5029 12.8147L7.802 10.1138" stroke="#000000" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <span class="text-black-800 mb-1">Connect primary Google Calendar account
+              </span>
+            </li>
+            <li class="flex items-center w-full h-8 my-8 gap-4">
+              <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M19.5059 10.1769V11.0051C19.5047 12.9466 18.8761 14.8356 17.7137 16.3905C16.5512 17.9455 14.9173 19.083 13.0556 19.6335C11.1938 20.1839 9.20404 20.1178 7.38294 19.445C5.56183 18.7722 4.007 17.5288 2.95034 15.9001C1.89367 14.2714 1.39178 12.3448 1.51952 10.4076C1.64725 8.47043 2.39778 6.62642 3.65915 5.15061C4.92053 3.6748 6.62517 2.64628 8.51885 2.21843C10.4125 1.79057 12.3938 1.98632 14.1671 2.77648"
+                  stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M19.5058 3.80273L10.5029 12.8147L7.802 10.1138" stroke="#000000" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <span class="text-black-800 mb-1">Add due dates, reminders, and notifications to your tasks
+              </span>
+            </li>
+          </ul>
+          <button
+            class="md:mx-0 my-4 mx-auto bg-blue-400 px-4 py-2 rounded-md text-white font-semibold flex gap-1 items-center hover:scale-110 ease-in-out delay-150 focus:outline-yellow-600 focus:outline-2 focus:outline">Get
+            Started</button>
+        </div>
+        <!-- Item 2 -->
+        <div class="shadow-md rounded-md m-2 p-2 bg-white px-4 py-8 border-2 border-blue-300" style="flex: 1 0 320px;">
+          <header>
+            <h1 class="text-blue-900 font-semibold text-2xl my-2">Personal</h1>
+          </header>
+          <h2 class="text-blue-900 font-bold text-4xl my-2">$11.2</h2>
+          <p class="text-blue-800 my-4">Keep home and family on track</p>
+          <ul>
+            <li class="flex items-center w-full h-8 my-8 gap-4">
+              <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M19.5059 10.1769V11.0051C19.5047 12.9466 18.8761 14.8356 17.7137 16.3905C16.5512 17.9455 14.9173 19.083 13.0556 19.6335C11.1938 20.1839 9.20404 20.1178 7.38294 19.445C5.56183 18.7722 4.007 17.5288 2.95034 15.9001C1.89367 14.2714 1.39178 12.3448 1.51952 10.4076C1.64725 8.47043 2.39778 6.62642 3.65915 5.15061C4.92053 3.6748 6.62517 2.64628 8.51885 2.21843C10.4125 1.79057 12.3938 1.98632 14.1671 2.77648"
+                  stroke="#4F9CF9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M19.5058 3.80273L10.5029 12.8147L7.802 10.1138" stroke="#4F9CF9" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <span class="text-blue-900 mb-1">Sync unlimited devices</span>
+            </li>
+            <li class="flex items-center w-full h-8 my-8 gap-4">
+              <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M19.5059 10.1769V11.0051C19.5047 12.9466 18.8761 14.8356 17.7137 16.3905C16.5512 17.9455 14.9173 19.083 13.0556 19.6335C11.1938 20.1839 9.20404 20.1178 7.38294 19.445C5.56183 18.7722 4.007 17.5288 2.95034 15.9001C1.89367 14.2714 1.39178 12.3448 1.51952 10.4076C1.64725 8.47043 2.39778 6.62642 3.65915 5.15061C4.92053 3.6748 6.62517 2.64628 8.51885 2.21843C10.4125 1.79057 12.3938 1.98632 14.1671 2.77648"
+                  stroke="#4F9CF9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M19.5058 3.80273L10.5029 12.8147L7.802 10.1138" stroke="#4F9CF9" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <span class="text-blue-900 mb-1">10 GB monthly uploads
+              </span>
+            </li>
+            <li class="flex items-center w-full h-8 my-8 gap-4">
+              <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M19.5059 10.1769V11.0051C19.5047 12.9466 18.8761 14.8356 17.7137 16.3905C16.5512 17.9455 14.9173 19.083 13.0556 19.6335C11.1938 20.1839 9.20404 20.1178 7.38294 19.445C5.56183 18.7722 4.007 17.5288 2.95034 15.9001C1.89367 14.2714 1.39178 12.3448 1.51952 10.4076C1.64725 8.47043 2.39778 6.62642 3.65915 5.15061C4.92053 3.6748 6.62517 2.64628 8.51885 2.21843C10.4125 1.79057 12.3938 1.98632 14.1671 2.77648"
+                  stroke="#4F9CF9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M19.5058 3.80273L10.5029 12.8147L7.802 10.1138" stroke="#4F9CF9" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <span class="text-blue-900 mb-1">200 MB max. note size
+              </span>
+            </li>
+            <li class="flex items-center w-full h-8 my-8 gap-4">
+              <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M19.5059 10.1769V11.0051C19.5047 12.9466 18.8761 14.8356 17.7137 16.3905C16.5512 17.9455 14.9173 19.083 13.0556 19.6335C11.1938 20.1839 9.20404 20.1178 7.38294 19.445C5.56183 18.7722 4.007 17.5288 2.95034 15.9001C1.89367 14.2714 1.39178 12.3448 1.51952 10.4076C1.64725 8.47043 2.39778 6.62642 3.65915 5.15061C4.92053 3.6748 6.62517 2.64628 8.51885 2.21843C10.4125 1.79057 12.3938 1.98632 14.1671 2.77648"
+                  stroke="#4F9CF9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M19.5058 3.80273L10.5029 12.8147L7.802 10.1138" stroke="#4F9CF9" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <span class="text-blue-900 mb-1">Customize Home dashboard and access extra widgets
+              </span>
+            </li>
+            <li class="flex items-center w-full h-8 my-8 gap-4">
+              <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M19.5059 10.1769V11.0051C19.5047 12.9466 18.8761 14.8356 17.7137 16.3905C16.5512 17.9455 14.9173 19.083 13.0556 19.6335C11.1938 20.1839 9.20404 20.1178 7.38294 19.445C5.56183 18.7722 4.007 17.5288 2.95034 15.9001C1.89367 14.2714 1.39178 12.3448 1.51952 10.4076C1.64725 8.47043 2.39778 6.62642 3.65915 5.15061C4.92053 3.6748 6.62517 2.64628 8.51885 2.21843C10.4125 1.79057 12.3938 1.98632 14.1671 2.77648"
+                  stroke="#4F9CF9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M19.5058 3.80273L10.5029 12.8147L7.802 10.1138" stroke="#4F9CF9" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <span class="text-blue-900 mb-1">Connect primary Google Calendar account
+              </span>
+            </li>
+            <li class="flex items-center w-full h-8 my-8 gap-4">
+              <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M19.5059 10.1769V11.0051C19.5047 12.9466 18.8761 14.8356 17.7137 16.3905C16.5512 17.9455 14.9173 19.083 13.0556 19.6335C11.1938 20.1839 9.20404 20.1178 7.38294 19.445C5.56183 18.7722 4.007 17.5288 2.95034 15.9001C1.89367 14.2714 1.39178 12.3448 1.51952 10.4076C1.64725 8.47043 2.39778 6.62642 3.65915 5.15061C4.92053 3.6748 6.62517 2.64628 8.51885 2.21843C10.4125 1.79057 12.3938 1.98632 14.1671 2.77648"
+                  stroke="#4F9CF9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M19.5058 3.80273L10.5029 12.8147L7.802 10.1138" stroke="#4F9CF9" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <span class="text-blue-900 mb-1">Add due dates, reminders, and notifications to your tasks
+              </span>
+            </li>
+          </ul>
+          <button
+            class="md:mx-0 my-4 mx-auto bg-blue-400 px-4 py-2 rounded-md text-white font-semibold flex gap-1 items-center hover:scale-110 ease-in-out delay-150 focus:outline-yellow-600 focus:outline-2 focus:outline">Get
+            Started</button>
+        </div>
+        <!-- Item 3 -->
+        <div class="shadow-md rounded-md m-2 p-2 bg-white border-yellow-400 border" style="flex: 1 0 300px;">
+          <header>
+            <h1 class="text-black-800 font-semibold text-2xl my-2">Free</h1>
+          </header>
+          <h2 class="text-black-800 font-bold text-4xl my-2">$0</h2>
+          <p class="text-black my-4">Capture ideas and find them quickly</p>
+          <ul>
+            <li class="flex items-center w-full h-8 my-8 gap-4">
+              <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M19.5059 10.1769V11.0051C19.5047 12.9466 18.8761 14.8356 17.7137 16.3905C16.5512 17.9455 14.9173 19.083 13.0556 19.6335C11.1938 20.1839 9.20404 20.1178 7.38294 19.445C5.56183 18.7722 4.007 17.5288 2.95034 15.9001C1.89367 14.2714 1.39178 12.3448 1.51952 10.4076C1.64725 8.47043 2.39778 6.62642 3.65915 5.15061C4.92053 3.6748 6.62517 2.64628 8.51885 2.21843C10.4125 1.79057 12.3938 1.98632 14.1671 2.77648"
+                  stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M19.5058 3.80273L10.5029 12.8147L7.802 10.1138" stroke="#000000" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <span class="text-black-800 mb-1">Sync unlimited devices</span>
+            </li>
+            <li class="flex items-center w-full h-8 my-8 gap-4">
+              <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M19.5059 10.1769V11.0051C19.5047 12.9466 18.8761 14.8356 17.7137 16.3905C16.5512 17.9455 14.9173 19.083 13.0556 19.6335C11.1938 20.1839 9.20404 20.1178 7.38294 19.445C5.56183 18.7722 4.007 17.5288 2.95034 15.9001C1.89367 14.2714 1.39178 12.3448 1.51952 10.4076C1.64725 8.47043 2.39778 6.62642 3.65915 5.15061C4.92053 3.6748 6.62517 2.64628 8.51885 2.21843C10.4125 1.79057 12.3938 1.98632 14.1671 2.77648"
+                  stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M19.5058 3.80273L10.5029 12.8147L7.802 10.1138" stroke="#000000" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <span class="text-black-800 mb-1">10 GB monthly uploads
+              </span>
+            </li>
+            <li class="flex items-center w-full h-8 my-8 gap-4">
+              <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M19.5059 10.1769V11.0051C19.5047 12.9466 18.8761 14.8356 17.7137 16.3905C16.5512 17.9455 14.9173 19.083 13.0556 19.6335C11.1938 20.1839 9.20404 20.1178 7.38294 19.445C5.56183 18.7722 4.007 17.5288 2.95034 15.9001C1.89367 14.2714 1.39178 12.3448 1.51952 10.4076C1.64725 8.47043 2.39778 6.62642 3.65915 5.15061C4.92053 3.6748 6.62517 2.64628 8.51885 2.21843C10.4125 1.79057 12.3938 1.98632 14.1671 2.77648"
+                  stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M19.5058 3.80273L10.5029 12.8147L7.802 10.1138" stroke="#000000" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <span class="text-black-800 mb-1">200 MB max. note size
+              </span>
+            </li>
+            <li class="flex items-center w-full h-8 my-8 gap-4">
+              <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M19.5059 10.1769V11.0051C19.5047 12.9466 18.8761 14.8356 17.7137 16.3905C16.5512 17.9455 14.9173 19.083 13.0556 19.6335C11.1938 20.1839 9.20404 20.1178 7.38294 19.445C5.56183 18.7722 4.007 17.5288 2.95034 15.9001C1.89367 14.2714 1.39178 12.3448 1.51952 10.4076C1.64725 8.47043 2.39778 6.62642 3.65915 5.15061C4.92053 3.6748 6.62517 2.64628 8.51885 2.21843C10.4125 1.79057 12.3938 1.98632 14.1671 2.77648"
+                  stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M19.5058 3.80273L10.5029 12.8147L7.802 10.1138" stroke="#000000" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <span class="text-black-800 mb-1">Customize Home dashboard and access extra widgets
+              </span>
+            </li>
+            <li class="flex items-center w-full h-8 my-8 gap-4">
+              <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M19.5059 10.1769V11.0051C19.5047 12.9466 18.8761 14.8356 17.7137 16.3905C16.5512 17.9455 14.9173 19.083 13.0556 19.6335C11.1938 20.1839 9.20404 20.1178 7.38294 19.445C5.56183 18.7722 4.007 17.5288 2.95034 15.9001C1.89367 14.2714 1.39178 12.3448 1.51952 10.4076C1.64725 8.47043 2.39778 6.62642 3.65915 5.15061C4.92053 3.6748 6.62517 2.64628 8.51885 2.21843C10.4125 1.79057 12.3938 1.98632 14.1671 2.77648"
+                  stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M19.5058 3.80273L10.5029 12.8147L7.802 10.1138" stroke="#000000" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <span class="text-black-800 mb-1">Connect primary Google Calendar account
+              </span>
+            </li>
+            <li class="flex items-center w-full h-8 my-8 gap-4">
+              <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M19.5059 10.1769V11.0051C19.5047 12.9466 18.8761 14.8356 17.7137 16.3905C16.5512 17.9455 14.9173 19.083 13.0556 19.6335C11.1938 20.1839 9.20404 20.1178 7.38294 19.445C5.56183 18.7722 4.007 17.5288 2.95034 15.9001C1.89367 14.2714 1.39178 12.3448 1.51952 10.4076C1.64725 8.47043 2.39778 6.62642 3.65915 5.15061C4.92053 3.6748 6.62517 2.64628 8.51885 2.21843C10.4125 1.79057 12.3938 1.98632 14.1671 2.77648"
+                  stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M19.5058 3.80273L10.5029 12.8147L7.802 10.1138" stroke="#000000" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <span class="text-black-800 mb-1">Add due dates, reminders, and notifications to your tasks
+              </span>
+            </li>
+          </ul>
+          <button
+            class="md:mx-0 my-4 mx-auto bg-blue-400 px-4 py-2 rounded-md text-white font-semibold flex gap-1 items-center hover:scale-110 ease-in-out delay-150 focus:outline-yellow-600 focus:outline-2 focus:outline">Get
+            Started</button>
+        </div>
+      </div>
+    </section>
+    <section
+      class="w-full flex-col justify-center items-center gap-2  py-8 bg-blue-900 w-[110%] -ml-[5%] px-[5%] md:py-14">
+      <header class="w-full text-center md:text-left flex flex-col items-start md:items-center">
+        <h1 class="text-5xl md:text-6xl text-left font-bold text-white md:text-center w-full ">
+          <span class="relative text-left  md:text-center  block z-20">Your work, everywhere you are</span>
+          <img class="relative z-10 -md:mt-8 -mt-4  w-2/4 ml-2 md:ml-[70%] md:mr-[30%]"
+            style="width: 300px !important; ;" src="https://ik.imagekit.io/5vxqfrr3p/you_are.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672752501564" alt="element">
+        </h1>
+        <p class="py-4 text-white text-left md:text-center md:py-8">Access your notes from your computer, phone or
+          tablet by synchronising with various services, including whitepace, Dropbox and OneDrive. The app is available
+          on Windows, macOS, Linux, Android and iOS. A terminal app is also available!
+        </p>
+        <button
+          class="bg-blue-400 px-4 py-2 rounded-md text-white font-semibold md:mx-auto  flex gap-1 items-center hover:scale-110 ease-in-out delay-150 focus:outline-yellow-600 focus:outline-2 focus:outline">Try
+          Taskey
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.25 6H11.25" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M6.25 1L11.25 6L6.25 11" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+      </header>
+    </section>
+    <section class="w-full md:flex-row flex-col flex justify-center items-center gap-2 md:py-24 py-8">
+      <header class="md:w-[40%] md:text-left text-center ">
+        <h1 class="text-6xl font-bold text-black-400  text-center w-full ">
+          <span class="relative text-center  text-center  block z-20">100% your data
+          </span>
+          <img class="relative z-10 -md:mt-8 -mt-4  w-2/4 mx-auto" style="width: 300px !important; ;"
+            src="https://ik.imagekit.io/5vxqfrr3p/Element-mobile.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672752427440" alt="element">
+        </h1>
+        <p class="py-4 text-blue-400">The app is open source and your notes are saved to an open format, so you'll
+          always have access to them. Uses End-To-End Encryption (E2EE) to secure your notes and ensure no-one but
+          yourself can access them.
+        </p>
+        <button
+          class="bg-blue-400 px-4 py-2 rounded-md text-white font-semibold mx-auto  flex gap-1 items-center hover:scale-110 ease-in-out delay-150 focus:outline-yellow-600 focus:outline-2 focus:outline">Read
+          more
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.25 6H11.25" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M6.25 1L11.25 6L6.25 11" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+      </header>
+      <div class="h-[80%] px-8 py-8 md:w-2/4 w-full ">
+        <img src="https://ik.imagekit.io/5vxqfrr3p/Element.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672753071860" alt="whitepace">
+      </div>
+    </section>
+    <section class="w-full flex-col justify-center items-center gap-2  py-8">
+      <header class="w-full text-center md:text-left flex flex-col items-center">
+        <h1 class="text-6xl font-bold text-black-400  text-center w-full ">
+          <span class="relative text-center  text-center  block z-20">Our sponsors</span>
+          <img class="relative z-10 -md:mt-8 -mt-4  w-2/4 mx-auto md:ml-[50%] md:mr-[50%]"
+            style="width: 300px !important; ;" src="https://ik.imagekit.io/5vxqfrr3p/Element-mobile.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672752427440" alt="element">
+        </h1>
+      </header>
+      <div
+        class="slidePricing h-[80%] px-8 py-8  w-full flex justify-start overflow-x-scroll md:overflow-x-hidden items-center">
+        <!-- Item 1 -->
+        <div class=" rounded-md m-2 p-2" style="flex: 1 0 50px;">
+          <svg width="56" height="69" viewBox="0 0 56 69" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M46.3673 38.6165C44.4968 29.2027 53.4321 23.6816 53.4321 23.6816C53.4321 23.6816 49.9508 18.645 44.1 17.3492C38.2521 16.0507 35.3252 17.6731 32.4041 18.89C29.4802 20.1098 28.0211 20.1098 28.0211 20.1098C23.8016 20.1098 20.717 15.6421 12.6777 17.6761C7.13915 19.0738 1.30867 25.4675 0.255239 33.0984C-0.798195 40.7322 1.47507 50.4728 5.85804 58.0221C10.241 65.5771 14.7058 68.4164 17.8748 68.4981C21.0439 68.5768 24.2072 66.2278 28.0211 65.6558C31.8381 65.0897 34.1871 67.0391 37.931 68.0925C41.6603 69.1431 42.9677 68.1684 47.2631 64.5149C51.5702 60.8613 55.4689 50.3825 55.4689 50.3825C55.4689 50.3825 48.2378 48.0362 46.3673 38.6165Z"
+              fill="black" />
+            <path
+              d="M38.0857 11.259C42.2294 7.03659 40.8258 0.499939 40.8258 0.499939C40.8258 0.499939 35.0071 1.52131 31.1084 5.57745C27.2128 9.63656 27.8576 16.0477 27.8576 16.0477C27.8576 16.0477 33.9419 15.4787 38.0857 11.259Z"
+              fill="black" />
+          </svg>
+        </div>
+        <!-- Item 2 -->
+        <div class=" rounded-md m-2 p-2" style="flex: 1 0 300px;">
+          <svg width="288" height="63" viewBox="0 0 288 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_5_37913)">
+              <path
+                d="M287.313 28.5491V23.4444H281.046V15.5085L280.835 15.5742L274.947 17.396L274.831 17.4316V23.4447H265.539V20.0949C265.539 18.5351 265.884 17.3415 266.564 16.5455C267.239 15.759 268.204 15.3591 269.435 15.3591C270.32 15.3591 271.237 15.57 272.159 15.9859L272.39 16.0903V10.7144L272.282 10.6739C271.421 10.3611 270.251 10.2036 268.8 10.2036C266.972 10.2036 265.311 10.606 263.863 11.4034C262.413 12.202 261.273 13.342 260.474 14.7914C259.678 16.2391 259.274 17.9112 259.274 19.7616V23.4444H254.91V28.5491H259.274V50.0543H265.539V28.5491H274.831V42.2153C274.831 47.8436 277.456 50.6959 282.633 50.6959C283.484 50.6959 284.379 50.5951 285.294 50.3977C286.224 50.1949 286.858 49.9925 287.231 49.7763L287.314 49.7269V44.575L287.059 44.7454C286.719 44.9746 286.295 45.1618 285.799 45.3011C285.3 45.4429 284.884 45.5139 284.561 45.5139C283.349 45.5139 282.451 45.1835 281.895 44.5312C281.332 43.873 281.046 42.7221 281.046 41.1121V28.5491H287.313ZM240.918 45.5148C238.644 45.5148 236.851 44.7522 235.588 43.25C234.316 41.7402 233.672 39.5877 233.672 36.8528C233.672 34.0312 234.316 31.8228 235.588 30.2863C236.853 28.76 238.628 27.9853 240.867 27.9853C243.04 27.9853 244.769 28.7251 246.008 30.1855C247.253 31.6535 247.885 33.8442 247.885 36.6986C247.885 39.5882 247.29 41.8078 246.119 43.2926C244.955 44.7662 243.206 45.5148 240.918 45.5148ZM241.197 22.8034C236.858 22.8034 233.412 24.0891 230.955 26.6249C228.5 29.1609 227.255 32.6705 227.255 37.0569C227.255 41.2232 228.47 44.5744 230.867 47.0159C233.264 49.4582 236.526 50.6953 240.562 50.6953C244.768 50.6953 248.145 49.3916 250.601 46.8207C253.057 44.2526 254.301 40.7762 254.301 36.4923C254.301 32.2608 253.133 28.8846 250.83 26.4595C248.525 24.0332 245.284 22.8034 241.197 22.8034ZM217.153 22.8034C214.202 22.8034 211.761 23.5668 209.896 25.0721C208.02 26.5864 207.068 28.5724 207.068 30.9757C207.068 32.2249 207.274 33.3345 207.678 34.2757C208.084 35.22 208.714 36.0514 209.55 36.7492C210.38 37.4413 211.661 38.1663 213.358 38.9039C214.785 39.4978 215.85 40.0001 216.526 40.396C217.186 40.7841 217.655 41.1741 217.92 41.554C218.177 41.9258 218.308 42.4346 218.308 43.0624C218.308 44.8502 216.984 45.72 214.26 45.72C213.25 45.72 212.098 45.5066 210.835 45.086C209.582 44.6718 208.399 44.0651 207.328 43.2873L207.068 43.0986V49.1993L207.163 49.2442C208.049 49.6581 209.167 50.0071 210.485 50.2817C211.799 50.5566 212.994 50.6964 214.032 50.6964C217.234 50.6964 219.813 49.9293 221.695 48.415C223.589 46.8904 224.549 44.8575 224.549 42.3711C224.549 40.5774 224.032 39.0393 223.014 37.7988C222.002 36.5684 220.247 35.4388 217.798 34.4403C215.848 33.6485 214.598 32.9911 214.082 32.4866C213.585 31.9991 213.333 31.3098 213.333 30.4368C213.333 29.663 213.645 29.043 214.284 28.5409C214.928 28.0364 215.825 27.7797 216.95 27.7797C217.994 27.7797 219.062 27.9465 220.124 28.2734C221.186 28.6002 222.118 29.0379 222.896 29.5734L223.152 29.7503V23.9633L223.054 23.9206C222.336 23.6092 221.389 23.3427 220.239 23.1265C219.095 22.9117 218.056 22.8034 217.153 22.8034ZM190.735 45.5148C188.461 45.5148 186.668 44.7522 185.405 43.25C184.133 41.7402 183.49 39.5882 183.49 36.8528C183.49 34.0312 184.134 31.8228 185.406 30.2863C186.669 28.76 188.445 27.9853 190.685 27.9853C192.856 27.9853 194.585 28.7251 195.825 30.1855C197.07 31.6535 197.701 33.8442 197.701 36.6986C197.701 39.5882 197.107 41.8078 195.935 43.2926C194.772 44.7662 193.023 45.5148 190.735 45.5148ZM191.014 22.8034C186.674 22.8034 183.228 24.0891 180.773 26.6249C178.317 29.1609 177.071 32.6705 177.071 37.0569C177.071 41.2249 178.287 44.5744 180.685 47.0159C183.082 49.4582 186.343 50.6953 190.379 50.6953C194.584 50.6953 197.963 49.3916 200.419 46.8207C202.874 44.2526 204.118 40.7762 204.118 36.4923C204.118 32.2608 202.951 28.8846 200.646 26.4595C198.341 24.0332 195.1 22.8034 191.014 22.8034ZM167.561 28.0527V23.4444H161.372V50.0537H167.561V36.442C167.561 34.1275 168.08 32.226 169.104 30.7898C170.115 29.3707 171.462 28.6516 173.106 28.6516C173.664 28.6516 174.29 28.7445 174.967 28.9284C175.638 29.1112 176.124 29.3097 176.41 29.5187L176.671 29.7093V23.3989L176.57 23.3554C175.994 23.1077 175.179 22.9828 174.147 22.9828C172.592 22.9828 171.2 23.4882 170.008 24.4833C168.961 25.358 168.205 26.5572 167.627 28.0527H167.561ZM150.289 22.8034C147.449 22.8034 144.917 23.4191 142.763 24.633C140.604 25.8496 138.935 27.5866 137.799 29.7952C136.668 31.9986 136.094 34.5722 136.094 37.4424C136.094 39.9566 136.651 42.2638 137.751 44.2973C138.852 46.3341 140.41 47.9276 142.382 49.0328C144.351 50.1365 146.628 50.6961 149.148 50.6961C152.089 50.6961 154.601 50.1014 156.614 48.9286L156.695 48.8814V43.1469L156.435 43.339C155.523 44.0109 154.504 44.5472 153.407 44.9336C152.313 45.3196 151.316 45.5148 150.442 45.5148C148.013 45.5148 146.064 44.7463 144.649 43.2311C143.23 41.7141 142.511 39.5837 142.511 36.9031C142.511 34.2055 143.261 32.0205 144.739 30.4082C146.212 28.8007 148.166 27.9853 150.544 27.9853C152.578 27.9853 154.56 28.6819 156.436 30.0578L156.695 30.2484V24.2062L156.611 24.1584C155.906 23.7589 154.943 23.4289 153.748 23.1788C152.558 22.9291 151.394 22.8034 150.289 22.8034ZM131.831 23.4447H125.642V50.0537H131.831V23.4447ZM128.8 12.109C127.782 12.109 126.893 12.4597 126.163 13.1547C125.43 13.8516 125.059 14.7291 125.059 15.7646C125.059 16.7838 125.426 17.6453 126.152 18.3237C126.873 19.0001 127.764 19.3429 128.801 19.3429C129.836 19.3429 130.731 19.0001 131.461 18.3248C132.195 17.6453 132.568 16.7841 132.568 15.7646C132.568 14.7653 132.205 13.8968 131.491 13.1828C130.777 12.4701 129.872 12.109 128.8 12.109ZM113.358 21.4814V50.0537H119.675V12.9236H110.933L99.8214 40.5027L89.0385 12.9236H79.9408V50.0534H85.8763V21.4786H86.0801L97.4665 50.0537H101.946L113.155 21.4814H113.358Z"
+                fill="#706D6E" />
+              <path d="M29.4285 29.9622H0.313843V0.516632H29.4285V29.9622Z" fill="#F1511B" />
+              <path d="M61.5743 29.9615H32.4602V0.515991H61.5743V29.9615Z" fill="#80CC28" />
+              <path d="M29.4276 62.4841H0.313843V33.0388H29.4276V62.4841Z" fill="#00ADEF" />
+              <path d="M61.5743 62.4841H32.4602V33.0388H61.5743V62.4841Z" fill="#FBBC09" />
+            </g>
+            <defs>
+              <clipPath id="clip0_5_37913">
+                <rect width="287" height="62" fill="white" transform="translate(0.313843 0.5)" />
+              </clipPath>
+            </defs>
+          </svg>
+
+        </div>
+        <!-- Item 3 -->
+        <div class=" rounded-md m-2 p-2" style="flex: 1 0 300px;">
+          <svg width="281" height="71" viewBox="0 0 281 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_5_37920)">
+              <path
+                d="M89.8384 55.626L93.3243 47.5756C97.0914 50.3709 102.095 51.8244 107.043 51.8244C110.698 51.8244 113.003 50.4268 113.003 48.3024C112.947 42.3764 91.1316 47.0166 90.9629 32.1457C90.9067 24.5985 97.6536 18.7843 107.212 18.7843C112.891 18.7843 118.569 20.1819 122.617 23.3685L119.356 31.5866C115.646 29.2386 111.035 27.5615 106.65 27.5615C103.67 27.5615 101.702 28.9591 101.702 30.7481C101.758 36.5622 123.742 33.3756 123.967 47.5756C123.967 55.2906 117.389 60.7134 107.943 60.7134C101.027 60.7134 94.6737 59.0922 89.8384 55.626ZM223.597 44.6685C221.854 47.6874 218.593 49.7559 214.826 49.7559C209.26 49.7559 204.762 45.2835 204.762 39.7489C204.762 34.2142 209.26 29.7418 214.826 29.7418C218.593 29.7418 221.854 31.8103 223.597 34.8292L233.212 29.5181C229.613 23.1449 222.698 18.7843 214.826 18.7843C203.188 18.7843 193.742 28.1764 193.742 39.7489C193.742 51.3213 203.188 60.7134 214.826 60.7134C222.754 60.7134 229.613 56.4087 233.212 49.9796L223.597 44.6685ZM128.802 1.39767H140.834V59.9307H128.802V1.39767ZM237.935 1.39767V59.9307H249.967V42.3764L264.248 59.9307H279.654L261.493 39.078L278.304 19.6229H263.573L249.967 35.7796V1.39767H237.935ZM176.593 44.7803C174.85 47.6315 171.252 49.7559 167.204 49.7559C161.638 49.7559 157.14 45.2835 157.14 39.7489C157.14 34.2142 161.638 29.7418 167.204 29.7418C171.252 29.7418 174.85 31.978 176.593 34.8851V44.7803ZM176.593 19.6229V24.3748C174.626 21.0764 169.734 18.7843 164.618 18.7843C154.047 18.7843 145.726 28.0646 145.726 39.6929C145.726 51.3213 154.047 60.7134 164.618 60.7134C169.734 60.7134 174.626 58.4213 176.593 55.1229V59.8748H188.626V19.6229H176.593Z"
+                fill="black" />
+              <path
+                d="M15.4532 44.7243C15.4532 48.8054 12.1359 52.1039 8.03149 52.1039C3.92707 52.1039 0.609802 48.8054 0.609802 44.7243C0.609802 40.6432 3.92707 37.3448 8.03149 37.3448H15.4532V44.7243ZM19.164 44.7243C19.164 40.6432 22.4813 37.3448 26.5857 37.3448C30.6901 37.3448 34.0074 40.6432 34.0074 44.7243V63.1732C34.0074 67.2543 30.6901 70.5527 26.5857 70.5527C22.4813 70.5527 19.164 67.2543 19.164 63.1732V44.7243Z"
+                fill="#E01E5A" />
+              <path
+                d="M26.5854 15.0945C22.4809 15.0945 19.1637 11.7961 19.1637 7.71498C19.1637 3.63387 22.4809 0.335449 26.5854 0.335449C30.6898 0.335449 34.007 3.63387 34.007 7.71498V15.0945H26.5854ZM26.5854 18.8402C30.6898 18.8402 34.007 22.1386 34.007 26.2197C34.007 30.3008 30.6898 33.5992 26.5854 33.5992H7.97491C3.87049 33.5992 0.553223 30.3008 0.553223 26.2197C0.553223 22.1386 3.87049 18.8402 7.97491 18.8402H26.5854Z"
+                fill="#36C5F0" />
+              <path
+                d="M56.3284 26.2197C56.3284 22.1386 59.6456 18.8402 63.7501 18.8402C67.8545 18.8402 71.1717 22.1386 71.1717 26.2197C71.1717 30.3008 67.8545 33.5992 63.7501 33.5992H56.3284V26.2197ZM52.6175 26.2197C52.6175 30.3008 49.3003 33.5992 45.1959 33.5992C41.0914 33.5992 37.7742 30.3008 37.7742 26.2197V7.71498C37.7742 3.63387 41.0914 0.335449 45.1959 0.335449C49.3003 0.335449 52.6175 3.63387 52.6175 7.71498V26.2197Z"
+                fill="#2EB67D" />
+              <path
+                d="M45.1959 55.7936C49.3003 55.7936 52.6175 59.0921 52.6175 63.1732C52.6175 67.2543 49.3003 70.5527 45.1959 70.5527C41.0914 70.5527 37.7742 67.2543 37.7742 63.1732V55.7936H45.1959ZM45.1959 52.1039C41.0914 52.1039 37.7742 48.8054 37.7742 44.7243C37.7742 40.6432 41.0914 37.3448 45.1959 37.3448H63.8063C67.9107 37.3448 71.228 40.6432 71.228 44.7243C71.228 48.8054 67.9107 52.1039 63.8063 52.1039H45.1959Z"
+                fill="#ECB22E" />
+            </g>
+            <defs>
+              <clipPath id="clip0_5_37920">
+                <rect width="280" height="71" fill="white" transform="translate(0.158691)" />
+              </clipPath>
+            </defs>
+          </svg>
+
+        </div>
+        <!-- Item 4-->
+        <div class=" rounded-md m-2 p-2" style="flex: 1 0 250px;">
+          <svg width="211" height="71" viewBox="0 0 211 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M90.2977 37.3327C90.2977 47.3769 82.4804 54.7783 72.8868 54.7783C63.2932 54.7783 55.476 47.3769 55.476 37.3327C55.476 27.2177 63.2932 19.8871 72.8868 19.8871C82.4804 19.8871 90.2977 27.2177 90.2977 37.3327ZM82.676 37.3327C82.676 31.0561 78.1453 26.7616 72.8868 26.7616C67.6284 26.7616 63.0976 31.0561 63.0976 37.3327C63.0976 43.5464 67.6284 47.9039 72.8868 47.9039C78.1453 47.9039 82.676 43.5386 82.676 37.3327Z"
+              fill="#EA4335" />
+            <path
+              d="M127.858 37.3327C127.858 47.3769 120.041 54.7783 110.447 54.7783C100.854 54.7783 93.0363 47.3769 93.0363 37.3327C93.0363 27.2256 100.854 19.8871 110.447 19.8871C120.041 19.8871 127.858 27.2177 127.858 37.3327ZM120.236 37.3327C120.236 31.0561 115.706 26.7616 110.447 26.7616C105.189 26.7616 100.658 31.0561 100.658 37.3327C100.658 43.5464 105.189 47.9039 110.447 47.9039C115.706 47.9039 120.236 43.5386 120.236 37.3327Z"
+              fill="#FBBC05" />
+            <path
+              d="M163.853 20.9411V52.2613C163.853 65.1449 156.294 70.4069 147.358 70.4069C138.946 70.4069 133.883 64.7517 131.974 60.1268L138.61 57.3503C139.791 60.1897 142.687 63.5404 147.35 63.5404C153.07 63.5404 156.615 59.9931 156.615 53.3153V50.8062H156.349C154.643 52.922 151.357 54.7704 147.209 54.7704C138.531 54.7704 130.581 47.1724 130.581 37.3956C130.581 27.5481 138.531 19.8871 147.209 19.8871C151.349 19.8871 154.636 21.7355 156.349 23.7884H156.615V20.949H163.853V20.9411ZM157.155 37.3956C157.155 31.2527 153.078 26.7615 147.89 26.7615C142.632 26.7615 138.226 31.2527 138.226 37.3956C138.226 43.4756 142.632 47.9039 147.89 47.9039C153.078 47.9039 157.155 43.4756 157.155 37.3956Z"
+              fill="#4285F4" />
+            <path d="M175.787 2.58292V53.7083H168.353V2.58292H175.787Z" fill="#34A853" />
+            <path
+              d="M204.756 43.0744L210.671 47.0385C208.762 49.878 204.161 54.7703 196.211 54.7703C186.351 54.7703 178.987 47.1093 178.987 37.3247C178.987 26.9502 186.413 19.8792 195.358 19.8792C204.364 19.8792 208.77 27.0839 210.21 30.9773L211 32.9594L187.799 42.6182C189.575 46.1183 192.337 47.9037 196.211 47.9037C200.092 47.9037 202.784 45.9846 204.756 43.0744ZM186.546 36.7977L202.056 30.3245C201.203 28.1457 198.636 26.6277 195.616 26.6277C191.742 26.6277 186.351 30.0649 186.546 36.7977Z"
+              fill="#EA4335" />
+            <path
+              d="M27.3368 32.7942V25.3928H52.1502C52.3928 26.6828 52.518 28.2087 52.518 29.8604C52.518 35.4134 51.0077 42.28 46.1405 47.1723C41.4063 52.1275 35.3575 54.7703 27.3446 54.7703C12.4925 54.7703 0.00366211 42.6103 0.00366211 27.6817C0.00366211 12.7531 12.4925 0.593079 27.3446 0.593079C35.561 0.593079 41.4141 3.83364 45.8119 8.05739L40.616 13.28C37.4625 10.3069 33.19 7.99447 27.3368 7.99447C16.4912 7.99447 8.00875 16.7802 8.00875 27.6817C8.00875 38.5832 16.4912 47.3689 27.3368 47.3689C34.3715 47.3689 38.378 44.5295 40.9446 41.9496C43.0261 39.8574 44.3955 36.8685 44.9354 32.7864L27.3368 32.7942Z"
+              fill="#4285F4" />
+          </svg>
+
+        </div>
+      </div>
+    </section>
+    <section class=" md:flex-row flex-col justify-center items-center gap-2 flex w-[110%] -ml-[5%] py-8 px-[5%]"
+      style="background:#043873 url('./assets/svgs/fundo.png')">
+
+      <div class="h-[80%] px-8 py-8 md:w-2/4 w-full ">
+        <img src="https://ik.imagekit.io/5vxqfrr3p/Apps.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672752693876" alt="whitepace">
+      </div>
+      <header class="md:w-[40%] w-full">
+        <h1 class="md:text-6xl text-5xl font-bold text-white">
+          <span class="relative text-center md:text-left  block z-20">Work with Your Favorite Apps Using
+            whitepace</span>
+          <img class="relative z-10 -md:mt-8 -mt-4 w-full " src="https://ik.imagekit.io/5vxqfrr3p/you_are.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672752501564" alt="element">
+        </h1>
+        <p class="py-4 text-white md:text-left text-center">Whitepace teams up with your favorite software. Integrate
+          with over 1000+ apps with Zapier to have all the tools you need for your project success.
+        </p>
+        <button
+          class="md:mx-0 my-4 mx-auto bg-blue-400 px-4 py-2 rounded-md text-white font-semibold flex gap-1 items-center hover:scale-110 ease-in-out delay-150 focus:outline-yellow-600 focus:outline-2 focus:outline">Read
+          more
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.25 6H11.25" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M6.25 1L11.25 6L6.25 11" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+      </header>
+    </section>
+    <section class="w-full flex-col justify-center items-center gap-2  py-8">
+      <header class="w-full text-center md:text-left flex flex-col items-center">
+        <h1 class="text-6xl font-bold text-black-400  text-center w-full ">
+          <span class="relative text-center  text-center  block z-20">See what our trusted users Say</span>
+          <img class="relative z-10 -md:mt-8 -mt-4  w-2/4 mx-auto md:ml-[50%] md:mr-[50%]"
+            style="width: 300px !important; ;" src="https://ik.imagekit.io/5vxqfrr3p/Element-mobile.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672752427440" alt="element">
+        </h1>
+      </header>
+      <div
+        class="slidePricing h-[80%] px-8 py-8  w-full flex justify-start overflow-x-scroll md:overflow-x-hidden items-center">
+        <!-- Item 1 -->
+        <div class="shadow-md rounded-md m-2 p-2 bg-white py-8 px-4" style="flex: 1 0 300px;">
+          <img src="https://ik.imagekit.io/5vxqfrr3p/Avater_02-1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672752838966" alt="avatar">
+          <p class="text-black my-4">"If you haven’t tried whitepace yet, you need to give it a shot for your next
+            event. It’s so easy and intuitive to get a new event setup and if you need any help their customer service
+            is seriously amazing.”</p>
+          <div class="w-full flex justify-between items-center">
+            <div>
+              <h3 class="font-bold">Jessie Owner</h3>
+              <p>Founder, XYZ Company</p>
+            </div>
+            <svg width="103" height="15" viewBox="0 0 103 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z"
+                fill="#FFE492" />
+              <path
+                d="M29.5 0L31.1839 5.18237H36.6329L32.2245 8.38525L33.9084 13.5676L29.5 10.3647L25.0916 13.5676L26.7755 8.38525L22.3671 5.18237H27.8161L29.5 0Z"
+                fill="#FFE492" />
+              <path
+                d="M51.5 0L53.1839 5.18237H58.6329L54.2245 8.38525L55.9084 13.5676L51.5 10.3647L47.0916 13.5676L48.7755 8.38525L44.3671 5.18237H49.8161L51.5 0Z"
+                fill="#FFE492" />
+              <path
+                d="M73.5 0L75.1839 5.18237H80.6329L76.2245 8.38525L77.9084 13.5676L73.5 10.3647L69.0916 13.5676L70.7755 8.38525L66.3671 5.18237H71.8161L73.5 0Z"
+                fill="#FFE492" />
+              <path
+                d="M95.5 0L97.1839 5.18237H102.633L98.2245 8.38525L99.9084 13.5676L95.5 10.3647L91.0916 13.5676L92.7755 8.38525L88.3671 5.18237H93.8161L95.5 0Z"
+                fill="#FFE492" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Item 2-->
+        <div class="shadow-md rounded-md m-2 p-2 bg-white py-8 px-4" style="flex: 1 0 300px;">
+          <img src="https://ik.imagekit.io/5vxqfrr3p/Avater_02.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672752837439" alt="avatar">
+          <p class="text-black my-4">“If you haven’t tried whitepace yet, you need to give it a shot for your next
+            event. It’s so easy and intuitive to get a new event setup and if you need any help their customer service
+            is seriously amazing.”</p>
+          <div class="w-full flex justify-between items-center">
+            <div>
+              <h3 class="font-bold">Jessie Owner</h3>
+              <p>Founder, XYZ Company</p>
+            </div>
+            <svg width="103" height="15" viewBox="0 0 103 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z"
+                fill="#FFE492" />
+              <path
+                d="M29.5 0L31.1839 5.18237H36.6329L32.2245 8.38525L33.9084 13.5676L29.5 10.3647L25.0916 13.5676L26.7755 8.38525L22.3671 5.18237H27.8161L29.5 0Z"
+                fill="#FFE492" />
+              <path
+                d="M51.5 0L53.1839 5.18237H58.6329L54.2245 8.38525L55.9084 13.5676L51.5 10.3647L47.0916 13.5676L48.7755 8.38525L44.3671 5.18237H49.8161L51.5 0Z"
+                fill="#FFE492" />
+              <path
+                d="M73.5 0L75.1839 5.18237H80.6329L76.2245 8.38525L77.9084 13.5676L73.5 10.3647L69.0916 13.5676L70.7755 8.38525L66.3671 5.18237H71.8161L73.5 0Z"
+                fill="#FFE492" />
+              <path
+                d="M95.5 0L97.1839 5.18237H102.633L98.2245 8.38525L99.9084 13.5676L95.5 10.3647L91.0916 13.5676L92.7755 8.38525L88.3671 5.18237H93.8161L95.5 0Z"
+                fill="#FFE492" />
+            </svg>
+          </div>
+
+        </div>
+        <!-- Item 3-->
+        <div class="shadow-md rounded-md m-2 p-2 bg-white py-8 px-4" style="flex: 1 0 300px;">
+          <img src="https://ik.imagekit.io/5vxqfrr3p/Avater_02-2.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672752837205" alt="avatar">
+          <p class="text-black my-4">"If you haven’t tried whitepace yet, you need to give it a shot for your next
+            event. It’s so easy and intuitive to get a new event setup and if you need any help their customer service
+            is seriously amazing.”</p>
+          <div class="w-full flex justify-between items-center">
+            <div>
+              <h3 class="font-bold">Jessie Owner</h3>
+              <p>Founder, XYZ Company</p>
+            </div>
+            <svg width="103" height="15" viewBox="0 0 103 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z"
+                fill="#FFE492" />
+              <path
+                d="M29.5 0L31.1839 5.18237H36.6329L32.2245 8.38525L33.9084 13.5676L29.5 10.3647L25.0916 13.5676L26.7755 8.38525L22.3671 5.18237H27.8161L29.5 0Z"
+                fill="#FFE492" />
+              <path
+                d="M51.5 0L53.1839 5.18237H58.6329L54.2245 8.38525L55.9084 13.5676L51.5 10.3647L47.0916 13.5676L48.7755 8.38525L44.3671 5.18237H49.8161L51.5 0Z"
+                fill="#FFE492" />
+              <path
+                d="M73.5 0L75.1839 5.18237H80.6329L76.2245 8.38525L77.9084 13.5676L73.5 10.3647L69.0916 13.5676L70.7755 8.38525L66.3671 5.18237H71.8161L73.5 0Z"
+                fill="#FFE492" />
+              <path
+                d="M95.5 0L97.1839 5.18237H102.633L98.2245 8.38525L99.9084 13.5676L95.5 10.3647L91.0916 13.5676L92.7755 8.38525L88.3671 5.18237H93.8161L95.5 0Z"
+                fill="#FFE492" />
+            </svg>
+          </div>
+        </div>
+    </section>
+  </main>
+  <footer class="px-[5%] w-[110%] -ml-[5%]  bg-blue-900 gap-4 py-14">
+    <div
+      class="w-11/12 grid md:grid-cols-5 md:grid-rows-1 grid-rows-5 md:justify-start justify-center mx-auto border-b border-blue-800 py-8 h-auto">
+      <div class="text-white pr-4 text-center md:text-center">
+        <img src="https://ik.imagekit.io/5vxqfrr3p/Logo.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672752991641" class="mx-auto md:mx-0 my-4 md:my-0" alt="">
+        <p>whitepace was created for the new ways we live and work. We make a better workspace around the world</p>
+      </div>
+      <div class="text-white md:ml-8">
+        <h2 class="font-bold text-center md:text-left">Product</h2>
+        <ul class=" flex flex-col justify-center md:justify-start">
+          <li class="mx-auto md:mx-0 py-2 text-yellow-300 hover:text-yellow-200">Overview</li>
+          <li class="mx-auto md:mx-0 py-2 hover:text-yellow-200">Pricing</li>
+          <li class="mx-auto md:mx-0 py-2 hover:text-yellow-200">Customer stories</li>
+        </ul>
+      </div>
+      <div class="text-white my-4 md:my-0">
+        <h2 class="font-bold text-center md:text-left">Resources</h2>
+        <ul class=" flex flex-col justify-center md:justify-start">
+          <li class="mx-auto md:mx-0 py-2 hover:text-yellow-200">Blog</li>
+          <li class="mx-auto md:mx-0 py-2 hover:text-yellow-200">Guides & tutorials</li>
+          <li class="mx-auto md:mx-0 py-2 hover:text-yellow-200">Help center</li>
+        </ul>
+      </div>
+      <div class="text-white">
+        <h2 class="font-bold text-center md:text-left">Company</h2>
+        <ul class=" flex flex-col justify-center md:justify-start">
+          <li class="mx-auto md:mx-0 py-2 hover:text-yellow-200">About us</li>
+          <li class="mx-auto md:mx-0 py-2 hover:text-yellow-200">Careers</li>
+          <li class="mx-auto md:mx-0 py-2 hover:text-yellow-200">Media kit</li>
+        </ul>
+      </div>
+      <div class="text-white">
+        <h2 class="text-2xl font-bold text-center md:text-left my-4 md:my-0">Try It Today</h2>
+        <p class="text-center md:text-left mb-4">Get started for free.
+          Add your whole team as your needs grow.</p>
+        <button
+          class="md:mx-0 my-4 mx-auto bg-blue-400 px-4 py-2 rounded-md text-white font-semibold flex gap-1 items-center hover:scale-110 ease-in-out delay-150 focus:outline-yellow-600 focus:outline-2 focus:outline">Start
+          today
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.25 6H11.25" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M6.25 1L11.25 6L6.25 11" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+      </div>
+
+
+    </div>
+    <div class="flex justify-between items-center flex-col md:flex-row">
+      <ul class="flex items-center gap-4 px-[5%] py-2 text-white flex-col md:flex-row my-4 md:my-0">
+        <li class="flex items-center gap-2">
+          <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M9.48901 0.430176C9.14844 0.430176 8.80811 0.448484 8.46948 0.484983C8.1591 0.516686 7.85253 0.568679 7.55008 0.631768C7.49155 0.644014 7.43298 0.656933 7.37445 0.670446C5.59245 1.07617 3.96529 1.98728 2.68809 3.29452C2.56932 3.41626 2.45305 3.54161 2.33935 3.67052C-1.11075 7.63136 -0.696703 13.6391 3.26417 17.0892C7.05619 20.3922 12.7641 20.1725 16.291 16.5877C16.41 16.4659 16.5262 16.3406 16.6397 16.2117C18.1623 14.4777 19.0013 12.2486 19 9.94109C19 4.68831 14.7418 0.430136 9.48901 0.430176ZM3.11069 3.77007C3.16078 3.71807 3.21277 3.6683 3.26382 3.61789C3.32278 3.55988 3.38143 3.50154 3.44167 3.44543C3.49461 3.39597 3.54914 3.34841 3.60336 3.30023C3.66454 3.24601 3.72541 3.1918 3.78819 3.13949C3.84335 3.09289 3.9001 3.04819 3.95653 3.00317C4.01994 2.95244 4.08334 2.90172 4.14865 2.85289C4.20635 2.80946 4.265 2.7673 4.32397 2.72608C4.3896 2.67916 4.45554 2.63097 4.52243 2.58722C4.58235 2.54664 4.6429 2.50733 4.70377 2.46833C4.77162 2.4249 4.83978 2.3821 4.90858 2.34152C4.97052 2.30455 5.03285 2.26817 5.09562 2.23246C5.16581 2.19252 5.23627 2.15352 5.30709 2.11548C5.37049 2.08167 5.4339 2.04858 5.4973 2.01625C5.56959 1.97979 5.6425 1.9446 5.71574 1.91004C5.77915 1.87992 5.84509 1.84981 5.9104 1.82127C5.9849 1.78957 6.06035 1.75787 6.13581 1.72616C6.20143 1.69921 6.26674 1.6729 6.333 1.64754C6.40972 1.61837 6.48739 1.59111 6.56507 1.56384C6.63133 1.5407 6.69759 1.51756 6.7648 1.49568C6.84374 1.47032 6.92331 1.44686 7.0032 1.42371C7.0701 1.40438 7.13636 1.3844 7.20357 1.36633C7.22925 1.35967 7.25493 1.35428 7.28061 1.34763C6.34219 2.25882 5.64579 3.38967 5.25446 4.63778C4.50198 4.43932 3.77352 4.15899 3.08216 3.80177C3.09262 3.79067 3.1015 3.77958 3.11069 3.77007ZM2.6548 4.28049C3.41635 4.69311 4.22391 5.0145 5.06075 5.23793C4.65051 6.66441 4.43517 8.13984 4.42066 9.62406H0.619454C0.688528 7.66683 1.40427 5.7877 2.6548 4.28049ZM2.6548 15.6017C1.40435 14.0944 0.688607 12.2153 0.619454 10.2581H4.42066C4.43517 11.7423 4.65047 13.2178 5.06075 14.6443C4.22395 14.8678 3.41639 15.1891 2.6548 15.6017ZM7.20167 18.5171C7.13763 18.501 7.07137 18.48 7.00542 18.4607C6.92521 18.4372 6.84469 18.4138 6.76543 18.3881C6.69854 18.3665 6.6326 18.3434 6.56665 18.3202C6.48866 18.2933 6.41067 18.2657 6.33363 18.2362C6.26769 18.2112 6.2027 18.1849 6.13739 18.1582C6.06162 18.1265 5.98585 18.0948 5.91071 18.0631C5.84604 18.0346 5.78168 18.0052 5.71764 17.975C5.64377 17.9401 5.57022 17.9046 5.49572 17.8678C5.43231 17.8361 5.36891 17.8044 5.3055 17.7699C5.23385 17.7315 5.16284 17.6922 5.09182 17.6516C5.02841 17.6164 4.96818 17.5803 4.90699 17.5435C4.83724 17.5017 4.76877 17.4586 4.70029 17.4145C4.64005 17.3761 4.57981 17.3371 4.52053 17.2972C4.453 17.2515 4.38611 17.204 4.31985 17.1564C4.26183 17.1149 4.20381 17.0734 4.14675 17.0296C4.08112 16.9802 4.01677 16.9291 3.95273 16.8778C3.89661 16.833 3.84081 16.7887 3.78597 16.7427C3.72256 16.6901 3.66137 16.6352 3.59987 16.5807C3.54597 16.5328 3.49176 16.4856 3.43913 16.4368C3.37858 16.3803 3.31993 16.3217 3.26096 16.2637C3.20992 16.2133 3.15793 16.1635 3.10784 16.1118C3.09864 16.102 3.08977 16.0918 3.08057 16.0823C3.7719 15.7249 4.50036 15.4445 5.25287 15.246C5.64429 16.4941 6.34065 17.6249 7.27902 18.5361C7.25334 18.5295 7.22735 18.5241 7.20167 18.5171ZM9.17202 18.7929C7.81544 18.6002 6.62625 17.1843 5.87806 15.0935C6.95977 14.8513 8.06364 14.7213 9.17202 14.7058V18.7929ZM9.17202 14.0717C7.99623 14.0872 6.82539 14.2268 5.67896 14.4883C5.28089 13.1129 5.0709 11.6899 5.05473 10.2581H9.17202V14.0717ZM9.17202 9.62406H5.05473C5.07086 8.19231 5.28085 6.76931 5.67896 5.3939C6.82539 5.65534 7.99627 5.79499 9.17202 5.81048V9.62406ZM9.17202 5.17642C8.0636 5.16097 6.95977 5.03102 5.87806 4.78869C6.62625 2.69787 7.81544 1.282 9.17202 1.08925V5.17642ZM16.3233 4.28049C17.5738 5.78774 18.2895 7.66686 18.3586 9.62406H14.5574C14.5429 8.13984 14.3276 6.66441 13.9174 5.23793C14.7542 5.01438 15.5617 4.69303 16.3233 4.28049ZM11.7739 1.36475C11.8405 1.38123 11.9067 1.40216 11.9727 1.4215C12.0529 1.44496 12.1334 1.46842 12.2127 1.4941C12.2796 1.51565 12.3455 1.5388 12.4114 1.56194C12.4894 1.58889 12.5674 1.61647 12.6445 1.64595C12.7104 1.671 12.7754 1.69731 12.8407 1.72394C12.9165 1.75565 12.9923 1.78735 13.0674 1.81905C13.1321 1.84759 13.1964 1.87695 13.2605 1.90719C13.3343 1.94206 13.4079 1.97757 13.4824 2.01434C13.5458 2.04605 13.6092 2.07775 13.6726 2.11231C13.7443 2.15067 13.8153 2.18998 13.8863 2.23056C13.9497 2.26575 14.0099 2.30189 14.0711 2.33867C14.1409 2.38052 14.2093 2.42363 14.2778 2.4677C14.3381 2.50606 14.3983 2.54506 14.4576 2.585C14.5251 2.63065 14.5917 2.67789 14.6579 2.72545C14.7163 2.76698 14.7743 2.80883 14.8317 2.85226C14.897 2.9014 14.961 2.95244 15.0254 3.0038C15.0812 3.04819 15.1373 3.09257 15.1921 3.13886C15.2555 3.19148 15.3167 3.24633 15.3782 3.30086C15.4321 3.34873 15.4863 3.39597 15.539 3.44479C15.5995 3.50122 15.6582 3.55988 15.7171 3.61789C15.7682 3.6683 15.8202 3.71807 15.8703 3.76975C15.8795 3.77958 15.8883 3.78972 15.8975 3.79923C15.2062 4.15661 14.4777 4.43706 13.7252 4.63556C13.3331 3.38733 12.6358 2.2566 11.6965 1.34572C11.7222 1.35238 11.7482 1.35777 11.7739 1.36475ZM9.80608 1.08925C11.1627 1.282 12.3518 2.69787 13.1 4.78869C12.0183 5.0309 10.9145 5.16085 9.80608 5.17642V1.08925ZM9.80608 5.81048C10.9819 5.79503 12.1527 5.65538 13.2991 5.3939C13.6972 6.76931 13.9072 8.19231 13.9234 9.62406H9.80608V5.81048ZM9.80608 10.2581H13.9234C13.9072 11.6899 13.6973 13.1129 13.2991 14.4883C12.1527 14.2269 10.9819 14.0872 9.80608 14.0717V10.2581ZM9.80608 18.7929V14.7058C10.9145 14.7212 12.0183 14.8512 13.1 15.0935C12.3518 17.1843 11.1627 18.6002 9.80608 18.7929ZM15.8674 16.1121C15.8173 16.1638 15.7656 16.2136 15.7146 16.264C15.6556 16.322 15.5967 16.3806 15.5361 16.4371C15.4835 16.4862 15.4293 16.5322 15.3754 16.5813C15.3139 16.6359 15.2527 16.6904 15.1899 16.743C15.1344 16.7893 15.078 16.834 15.0216 16.879C14.9582 16.9297 14.8948 16.9805 14.8295 17.0293C14.7718 17.0727 14.7131 17.1149 14.6541 17.1561C14.5885 17.203 14.5226 17.2512 14.4557 17.295C14.3958 17.3355 14.3352 17.3749 14.2743 17.4135C14.2065 17.4573 14.1381 17.4996 14.0692 17.5403C14.0058 17.5774 13.9452 17.6136 13.8828 17.6494C13.8126 17.6894 13.742 17.7283 13.671 17.7664C13.6076 17.8002 13.5442 17.8333 13.4808 17.8656C13.4085 17.9021 13.3356 17.9373 13.2624 17.9718C13.199 18.0019 13.133 18.0321 13.0677 18.0606C12.9932 18.0923 12.9177 18.124 12.8423 18.1557C12.7767 18.1823 12.7114 18.209 12.6454 18.234C12.5681 18.2635 12.4904 18.2911 12.4124 18.318C12.3465 18.3412 12.2805 18.3643 12.2136 18.3859C12.1344 18.4116 12.0551 18.435 11.9743 18.4582C11.908 18.4778 11.8414 18.4975 11.7745 18.5155C11.7489 18.5222 11.7232 18.5276 11.6975 18.5342C12.6359 17.6231 13.3323 16.4922 13.7236 15.2441C14.4761 15.4425 15.2046 15.7229 15.8959 16.0801C15.8855 16.0915 15.8766 16.1026 15.8674 16.1121ZM16.3233 15.6017C15.5618 15.1891 14.7542 14.8677 13.9174 14.6443C14.3276 13.2178 14.5429 11.7423 14.5574 10.2581H18.3586C18.2896 12.2153 17.5738 14.0945 16.3233 15.6017Z"
+              fill="white" />
+          </svg>
+          <span>English</span>
+          <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 4.9292L10 10.9292L16 4.9292" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+
+        </li>
+        <li>Terms & privacy</li>
+        <li>Security</li>
+        <li>Status</li>
+        <li>©2021 Whitepace LLC.</li>
+      </ul>
+      <ul class="flex items-center gap-4 px-[5%] py-2 text-white">
+        <li><svg width="9" height="18" viewBox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M2.5058 10.0045C2.44316 10.0045 1.06497 10.0045 0.438515 10.0045C0.104408 10.0045 0 9.87926 0 9.56603C0 8.73077 0 7.87462 0 7.03935C0 6.70524 0.12529 6.60084 0.438515 6.60084H2.5058C2.5058 6.53819 2.5058 5.32705 2.5058 4.76325C2.5058 3.92798 2.65197 3.13448 3.06961 2.40362C3.50812 1.65188 4.13457 1.15072 4.92807 0.858376C5.45012 0.670441 5.97216 0.586914 6.53596 0.586914H8.58237C8.87471 0.586914 9 0.712204 9 1.00455V3.38506C9 3.6774 8.87471 3.80269 8.58237 3.80269C8.01856 3.80269 7.45476 3.80269 6.89095 3.82357C6.32715 3.82357 6.0348 4.09504 6.0348 4.67972C6.01392 5.30617 6.0348 5.91174 6.0348 6.55907H8.45708C8.79118 6.55907 8.91647 6.68436 8.91647 7.01847V9.54515C8.91647 9.87926 8.81207 9.98367 8.45708 9.98367C7.70534 9.98367 6.09745 9.98367 6.0348 9.98367V16.7911C6.0348 17.1461 5.93039 17.2714 5.55452 17.2714C4.67749 17.2714 3.82135 17.2714 2.94432 17.2714C2.63109 17.2714 2.5058 17.1461 2.5058 16.8329C2.5058 14.6403 2.5058 10.0672 2.5058 10.0045Z"
+              fill="#F7F7EE" />
+          </svg>
+        </li>
+        <li><svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M17 1.65814C16.3678 1.93545 15.6942 2.11926 14.9919 2.20851C15.7144 1.77714 16.2658 1.09926 16.5251 0.282199C15.8514 0.683824 15.1077 0.967512 14.3151 1.12582C13.6754 0.444762 12.7638 0.0229492 11.7693 0.0229492C9.83981 0.0229492 8.28644 1.58907 8.28644 3.50901C8.28644 3.78526 8.30981 4.05089 8.36719 4.30376C5.46975 4.16245 2.90594 2.77376 1.18362 0.658324C0.882937 1.18001 0.706563 1.77714 0.706563 2.41995C0.706563 3.62695 1.32812 4.69689 2.25463 5.31632C1.69469 5.3057 1.14538 5.14314 0.68 4.88707C0.68 4.8977 0.68 4.91151 0.68 4.92532C0.68 6.61895 1.88806 8.0257 3.47225 8.34976C3.18856 8.42732 2.87937 8.46451 2.5585 8.46451C2.33538 8.46451 2.11012 8.45176 1.89869 8.40501C2.35025 9.7852 3.63163 10.7999 5.15525 10.8328C3.9695 11.7604 2.46394 12.3193 0.834063 12.3193C0.54825 12.3193 0.274125 12.3065 0 12.2714C1.54381 13.267 3.37344 13.8354 5.3465 13.8354C11.7597 13.8354 15.266 8.52295 15.266 3.91807C15.266 3.76401 15.2607 3.61526 15.2533 3.46757C15.9449 2.9767 16.5261 2.36364 17 1.65814Z"
+              fill="#F7F7EE" />
+          </svg>
+        </li>
+        <li><svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M14.9963 15.4291V15.4285H15V9.90996C15 7.21025 14.4247 5.13062 11.3004 5.13062C9.79839 5.13062 8.79045 5.96322 8.37897 6.75257H8.33552V5.38265H5.37317V15.4285H8.45779V10.4542C8.45779 9.14444 8.70356 7.87797 10.3092 7.87797C11.8912 7.87797 11.9148 9.37265 11.9148 10.5382V15.4291H14.9963Z"
+              fill="#F7F7EE" />
+            <path d="M0.223877 5.35474H3.35821V15.2055H0.223877V5.35474Z" fill="#F7F7EE" />
+            <path
+              d="M1.79104 0.429199C0.802303 0.429199 0 1.22776 0 2.21189C0 3.19602 0.802303 4.01129 1.79104 4.01129C2.77979 4.01129 3.58209 3.19602 3.58209 2.21189C3.58147 1.22776 2.77916 0.429199 1.79104 0.429199V0.429199Z"
+              fill="#F7F7EE" />
+          </svg>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    const slidePricings = document.querySelectorAll(".slidePricing");
+    function loadScrollToCenter() {
+      for (let slidePricing of slidePricings) {
+        slidePricing.scrollLeft = 320;
+      }
+    }
+    loadScrollToCenter();
+  </script>
+</body>
+
+</html>
