@@ -1,0 +1,196 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+:root{
+    --color-cyandark:#2B788B;
+    --color-cyanlight:#C3DCE3;
+    --color-pinkdark:#945069;
+    --color-pinklight:#F2D4DC;
+    --color-black:#000000;
+    --color-greylight:#F6F5F4;
+    --color-greymedium:#E0E0E0;
+    --color-greyicon:#BABABA;
+    --color-greydark:#757575;
+    --color-cyan:#5996A5;
+    --color-green:#639B6D;
+    --color-pink:#F2D4DC;
+    --color-red:#A95151;            
+    --color-yellow:#C4A24C;
+    --color-orange:#CB5C44;
+    --shadow1:0px 343.472px 343.472px rgba(52, 41, 39, 0.08), 0px 183.185px 183.185px rgba(52, 41, 39, 0.12), 0px 91.5925px 91.5925px rgba(52, 41, 39, 0.04), 0px 68.6944px 68.6944px rgba(52, 41, 39, 0.04), 0px 11.4491px 68.6944px rgba(52, 41, 39, 0.04), 0px 11.4491px 11.4491px rgba(52, 41, 39, 0.04);
+    --shadow2:0 4px 4px 0 rgba(0,0,0,.25);
+}
+@font-face {
+    font-family: DelaGothic;
+    src: url('../fonts/DelaGothicOne-Regular.woff2');
+}
+@font-face {
+    font-family: Montserrat;
+    src: url('../fonts/Montserrat-VariableFont_wght.woff2');
+}
+body{
+    font-family: Montserrat;
+}
+h1{
+    font-size:56px;
+    line-height: 56px;
+    font-weight: 400;
+}
+
+h1,h2,h2,h3{
+    font-family: DelaGothic;
+}
+p,a,li{
+    font-family: Montserrat;
+}
+.section{
+    width:100vw;
+    padding:100px;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+button:focus, button:active{
+    outline:none;
+    border:none;
+}
+/*========================================*/
+/*              Global                    */
+/*========================================*/
+.section{
+    padding: 50px 100px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:1fr;
+    align-items: center;
+}
+.section .box_image{
+    width:100%;
+    position: relative;
+}
+.section .box_image img{
+    width:100%;
+    height:100%;
+    object-fit: contain;
+}
+.section p.description{
+    font-size: 18px;
+    line-height:25px;
+    font-weight: 600;
+    width:70%;
+    margin:30px 0;
+}
+.section button.go_to_action{
+    width:auto;
+    height:44px;
+    border-radius:20px;
+    padding: 0 20px;
+    color:var(--color-cyandark);
+    background-color: var(--color-cyanlight);
+    border:none;
+    font-family: Montserrat;
+    font-size:16px;
+    font-weight: bold;
+}
+@media (max-width:780px){
+    .section{
+        grid-template-columns: auto;
+        padding:20px;
+        overflow-x: hidden;
+    }
+    .section h1{
+        text-align:center;
+        font-size:32px;
+        line-height: 32px;
+    }
+    .section p.description{
+        text-align:center;
+        width:100%;
+        font-size:14px;
+        line-height: 14px;
+    }
+    .section button.go_to_action{
+        margin-left:50%;
+        transform: translateX(-50%);
+        min-width: 160px;
+        margin-bottom: 20px;
+    }
+    
+}
+/*========================================*/
+/*              footer                    */
+/*========================================*/
+.footer{
+    padding: 50px 100px;
+    background-color: var(--color-greylight);
+}
+.footer nav, .footer div.footer_last{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--color-greymedium);
+    padding: 20px 0;
+}
+.footer nav ul{
+    display: flex;
+}
+.footer nav ul li a,
+.footer div.footer_last a{
+    color: var(--color-greydark);
+    padding-right: 20px;
+    font-weight: 700;
+}
+.footer nav ul li a:hover,
+.footer div.footer_last a:hover{
+    color: var(--color-cyan);
+    transition: color 0.5s;
+}
+.footer div.footer_last{
+    border:none;
+}
+.footer div.footer_last div{
+    display: flex;
+}
+.footer div.footer_last a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:30px;
+    padding: 0;
+    margin: 0 5px;
+    height: 30px;
+}
+.footer div.footer_last a:hover{
+    background-color: var(--color-greydark);
+    border-radius: 5px;
+}
+.footer div.footer_last{
+    color: var(--color-greydark);
+    font-weight: 700;
+}
+@media (max-width:780px){
+    .footer nav ul{
+        flex-direction: column;
+    }
+    .footer nav ul li{
+        margin-bottom: 10px;
+    }
+    .footer div.footer_last{
+        flex-direction: column;
+    }
+    .footer div.footer_last div{
+        margin-bottom: 20px;
+    }
+    .footer div.footer_last  p{
+        text-align: center;
+    }
+}

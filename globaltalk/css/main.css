@@ -1,0 +1,210 @@
+/*========================================*/
+/*             Header                     */
+/*========================================*/
+.header {
+    background-color: var(--color-greylight) !important;
+    width: 100vw;
+    padding: 0 100px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 60px;
+    border-bottom: 1px solid var(--color-greylight);
+}
+
+.header button {
+    display: none;
+}
+
+.header h1 {
+    font-size: 20px;
+    padding-right: 10px;
+    border-right: 2px solid var(--color-greylight);
+}
+
+.header nav {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header nav ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header li,
+.header li a {
+    color: var(--color-greydark);
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header nav ul li {
+    margin: 0 10px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    cursor: pointer;
+}
+
+.header nav ul li a .first_letter {
+    text-transform: uppercase;
+    font-weight: 800;
+    color: var(--color-cyandark);
+    background-color: var(--color-cyanlight);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+
+.header nav ul li:last-child a {
+    font-weight: 900;
+    color: var(--color-black)
+}
+
+.header li:hover,
+.header li a:hover {
+    font-weight: 800;
+    color: var(--color-greydark);
+    transition: color 0.3s;
+}
+
+.header nav ul li:last-child a:hover {
+    color: var(--color-cyandark);
+}
+
+/*========================================*/
+/*              Hero                      */
+/*========================================*/
+.hero{
+    background-color: var(--color-greylight) !important;
+}
+.hero>header>span {
+    display: inline-block;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-cyan);
+    margin-bottom:20px;
+}
+.hero .items_hero{
+    width:100%;
+    height:65px;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top:30px;
+}
+.hero .items_hero div.separator{
+    width:2px;
+    height:70%;
+    background-color: var(--color-greylight);
+}
+.hero .items_hero div{
+    height:100%;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right:30px;
+}
+.hero .items_hero div img{
+    margin-right:10px;
+}
+.hero .items_hero div p{
+    display:block;
+}
+.hero .items_hero div p span:first-child{
+    font-family: DelaGothic;
+    font-size:40px;
+}
+.hero .items_hero div p span:first-child b{
+    color:var(--color-cyan);
+}
+.hero .items_hero div p span{
+    display: block;
+    line-height:30px;
+}
+/*========================================*/
+/*            Learn a language            */
+/*========================================*/
+.learn header{
+    order:2;
+}
+.learn .items{
+    display:flex;
+}
+.learn .items div{
+    width:131px;
+    height:145px;
+    position: relative;
+    margin-right:20px;
+}
+.learn .items div img{
+    z-index:8;
+    position: relative;
+    margin:0 auto;
+    width:80%;
+    display: block;
+}
+.learn .items div p{
+    position: relative;
+    z-index:8;
+    text-align:center;
+    font-weight: 800;
+    margin-top:20px;
+    color:var(--color-red)
+}
+.learn  .items div::before{
+    content:"";
+    display:block;
+    width:100%;
+    height:80%;
+    background-color: var(--color-pink);
+    position: absolute;
+    bottom:0;
+    left:0;
+    border-radius:5px;
+    z-index:5;
+}
+.learn .items div:last-child{
+    width:172px;
+}
+.learn .items div:last-child img{
+    width:50%;
+    margin-top:-10px;
+}
+.learn .items div:last-child p{
+    color:var(--color-greydark);
+}
+.learn  .items div:last-child::before{
+    background-color: var(--color-cyanlight);
+}
+/*========================================*/
+/*       Increase your vocabulary         */
+/*========================================*/
+.increase{
+    background-color: var(--color-greylight);
+    padding: 0 100px;
+}
+.increase img{
+    margin-bottom: -10px;
+}
+/*========================================*/
+/*      Watch your progress every day.    */
+/*========================================*/
+.watch header{
+    order:2;
+}
